@@ -68,11 +68,13 @@ export default function DevOpsSection() {
   });
 
   return (
-    <section className="w-[35vw] h-[25vh] bg-black border border-purple-700 rounded-2xl font-mono text-sm overflow-hidden">
-      <div
-        ref={bodyRef}
-        className="p-4 [&_.prompt]:text-[#c9d1d9] [&_.header]:text-[#79c0ff] [&_.up]:text-[#7ee787] [&_.output]:text-[#8b949e]"
-      />
+    <section className="w-[35vw] h-[25vh] p-2 bg-(--second-bg)/40 border border-(--border) rounded-2xl font-mono text-sm overflow-hidden">
+      <div className="bg-black rounded-xl h-full">
+        <div
+          ref={bodyRef}
+          className="p-2 [&_.prompt]:text-[#c9d1d9] [&_.header]:text-[#79c0ff] [&_.up]:text-[#7ee787] [&_.output]:text-[#8b949e]"
+        />
+      </div>
     </section>
   );
 }

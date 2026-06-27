@@ -11,7 +11,7 @@ export default function HourSection() {
   }, 1000);
 
   return (
-    <section className="relative w-[17vw] h-[25vh] bg-gray-800/40 border border-purple-700 rounded-2xl">
+    <section className="relative w-[17vw] h-[25vh] bg-(--second-bg)/40 border border-(--border) rounded-2xl text-(--text)">
       <div className="flex flex-col items-center justify-center h-full">
         <p className="text-7xl">
           {time[0]}:{time[1]}

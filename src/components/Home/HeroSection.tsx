@@ -5,7 +5,7 @@ import { LuMapPin } from "react-icons/lu";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col gap-7 items-center justify-center w-[35vw] h-[90vh] bg-gray-800/40 border border-purple-700 rounded-2xl">
+    <section className="relative flex flex-col gap-7 items-center justify-center w-[35vw] h-[90vh] bg-(--second-bg)/40 border border-(--border) text-(--text) rounded-2xl">
       <img
         src={profile}
         alt="Profile"
@@ -13,19 +13,19 @@ export default function HeroSection() {
       />
 
       <div className="flex flex-col gap-3 items-center justify-center">
-        <div className="px-6 py-2 text-white bg-gray-700/50 rounded-2xl text-4xl font-bold text-center">
+        <div className="px-6 py-2 text-(--h-text) bg-(--second-bg)/50 rounded-2xl text-4xl font-bold text-center">
           DELPRAT Loïc
         </div>
-        <div className="flex items-center justify-center gap-2 px-4 py-2 text-white bg-gray-700/50 rounded-2xl text-lg text-center">
-          <BsCodeSlash className="text-white text-md" />
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-(--second-bg)/50 rounded-2xl text-lg text-center">
+          <BsCodeSlash className="text-smd" />
           class Dev import DevOps
         </div>
-        <div className="flex items-center justify-center gap-2 px-4 py-2 text-white bg-gray-700/50 rounded-2xl text-lg text-center">
-          <LuMapPin className="text-white text-md" />
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-(--second-bg)/50 rounded-2xl text-lg text-center">
+          <LuMapPin className="text-md" />
           Toulouse
         </div>
-        <div className="flex items-center justify-center gap-2 px-4 py-2 text-white bg-gray-700/50 rounded-2xl text-lg text-center">
-          <CiMail className="text-white text-md" />
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-(--second-bg)/50 rounded-2xl text-lg text-center">
+          <CiMail className="text-md" />
           <a href="mailto:delprat.loic@gmail.com">contact@loic-delprat.fr</a>
         </div>
       </div>
@@ -36,14 +36,14 @@ export default function HeroSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsGithub className="text-white text-3xl" />
+          <BsGithub className="text-3xl" />
         </a>
         <a
           href="https://www.linkedin.com/in/loic-delprat/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsLinkedin className="text-white text-3xl" />
+          <BsLinkedin className="text-3xl" />
         </a>
       </div>
     </section>

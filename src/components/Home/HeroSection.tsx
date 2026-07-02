@@ -5,11 +5,11 @@ import { LuMapPin } from "react-icons/lu";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col gap-7 items-center justify-center w-[35vw] h-[90vh] bg-(--second-bg)/40 border border-(--border) text-(--text) rounded-2xl">
+    <section className="relative flex flex-col gap-7 pt-8 pb-8 md:pt-8 md:pb-8 items-center justify-center w-[85vw] md:w-[38] lg:w-[35vw] h-auto md:h-[90vh] bg-(--second-bg)/40 border border-(--border) text-(--text) rounded-2xl">
       <img
         src={profile}
         alt="Profile"
-        className="rounded-full border-3 border-(--border) bg-amber-50 w-[20vw] aspect-square"
+        className="rounded-full border-3 border-(--border) bg-amber-50 h-[35vh] aspect-square"
       />
 
       <div className="flex flex-col gap-3 items-center justify-center">
@@ -17,7 +17,7 @@ export default function HeroSection() {
           DELPRAT Loïc
         </div>
         <div className="flex items-center justify-center gap-2 px-4 py-2 bg-(--second-bg)/50 rounded-2xl text-lg text-center">
-          <BsCodeSlash className="text-smd" />
+          <BsCodeSlash className="text-md" />
           class Dev import DevOps
         </div>
         <div className="flex items-center justify-center gap-2 px-4 py-2 bg-(--second-bg)/50 rounded-2xl text-lg text-center">

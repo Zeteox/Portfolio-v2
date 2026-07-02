@@ -7,7 +7,7 @@ export default function App() {
   const isBorder = window.location.pathname !== "/";
   return (
     <>
-      <div className="h-screen flex flex-row items-center justify-center gap-8">
+      <div className="min-h-screen md:h-screen flex flex-col md:flex-row items-center justify-center gap-8 mt-5 mb-5 md:mb-0 md:mt-0">
         <HeroSection />
 
         <div

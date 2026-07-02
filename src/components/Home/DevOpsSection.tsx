@@ -68,8 +68,8 @@ export default function DevOpsSection() {
   });
 
   return (
-    <section className="w-[35.5vw] h-[25vh] p-2 bg-(--second-bg)/40 border border-(--border) rounded-2xl font-mono text-sm overflow-hidden">
-      <div className="bg-black rounded-xl border border-(--border) h-full">
+    <section className="w-[85vw] md:w-[55vw] lg:w-[37vw] h-[25vh] p-2 bg-(--second-bg)/40 border border-(--border) rounded-2xl font-mono text-sm overflow-hidden">
+      <div className="bg-black rounded-xl border border-(--border) h-full text-sm  lg:text-xs overflow-y-scroll">
         <div
           ref={bodyRef}
           className="p-2 [&_.prompt]:text-[#c9d1d9] [&_.header]:text-[#79c0ff] [&_.up]:text-[#7ee787] [&_.output]:text-[#8b949e]"

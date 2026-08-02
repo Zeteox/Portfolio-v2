@@ -16,7 +16,7 @@ export default function CV() {
   }
 
   return (
-    <div className="flex flex-col gap-8 m-4 overflow-y-scroll overflow-x-auto">
+    <section className="flex flex-col gap-8 m-4 overflow-y-scroll overflow-x-auto">
       <div className="flex items-center justify-between text-(--text)">
         <button
           className="hover:text-(--border) focus:text-(--border)"
@@ -33,6 +33,6 @@ export default function CV() {
           className="w-full h-screen rounded-lg"
         />
       </div>
-    </div>
+    </section>
   );
 }

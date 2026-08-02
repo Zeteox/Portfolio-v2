@@ -9,7 +9,7 @@ export default function HeroSection() {
       <img
         src={profile}
         alt="Profile"
-        className="rounded-full border-3 border-(--border) bg-amber-50 h-[35vh] aspect-square"
+        className="rounded-full border-3 border-(--border) bg-amber-50 h-[25vh] lg:h-[35vh] aspect-square"
       />
 
       <div className="flex flex-col gap-3 items-center justify-center">

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { flushSync } from "react-dom";
 import { FaArrowLeft } from "react-icons/fa";
 
-export default function About() {
+export default function CV() {
   const navigate = useNavigate();
 
   function goTo(path: string) {
@@ -16,18 +16,23 @@ export default function About() {
   }
 
   return (
-    <div className="flex flex-col flex- gap-8 m-4 overflow-y-scroll overflow-x-auto">
-      <div className="grid grid-cols-3 grid-rows-1">
+    <div className="flex flex-col gap-8 m-4 overflow-y-scroll overflow-x-auto">
+      <div className="flex items-center justify-between text-(--text)">
         <button
-          className="text-(--text) hover:text-(--border) focus:text-(--border) "
+          className="hover:text-(--border) focus:text-(--border)"
           onClick={() => goTo("/")}
         >
           <FaArrowLeft />
         </button>
-        <span className="flex-1"></span>
+        <h1 className="text-3xl font-bold">CV</h1>
+        <div className="w-6" />
       </div>
-
-      <div className="flex"></div>
+      <div className="flex justify-center flex-1">
+        <iframe
+          src="/CV_DELPRAT_Loic_2026.pdf"
+          className="w-full h-screen rounded-lg"
+        />
+      </div>
     </div>
   );
 }

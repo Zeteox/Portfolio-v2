@@ -27,19 +27,25 @@ export const AllPages = [
     "title": "Formations",
     "sections": [
       {
-        "title": "2024 - Présent : Bachelor Informatique",
-        "style": "case",
-        "content": "Étudiant en deuxième année de Bachelor Informatique à YNOV, sur le campus de Toulouse.",
-      },
-      {
-        "title": "2026 : Stage Informatique",
-        "style": "case",
-        "content": "Stage en informatique chez Ludovick Roux",
-      },
-      {
-        "title": "2024 : BAC général",
-        "style": "case",
-        "content": "Baccalauréat général au lycée Borde Basse avec pour spécialités : Mathématiques et NSI (Numérique et Sciences Informatiques).",
+        "title": "",
+        "style": "timeline",
+        "content": [
+          {
+            "title": "Bachelor Informatique",
+            "date": "2024 - Présent",
+            "content": "Étudiant en deuxième année de Bachelor Informatique à YNOV, sur le campus de Toulouse.",
+          },
+          {
+            "title": "Stage Informatique",
+            "date": "2026",
+            "content": "Stage en informatique chez ROUX LUDOVIC - Java Springboot",
+          },
+          {
+            "title": "BAC général",
+            "date": "2024",
+            "content": "Baccalauréat général au lycée Borde Basse avec pour spécialités : Mathématiques et NSI (Numérique et Sciences Informatiques).",
+          },
+        ],
       },
     ],
   },

@@ -39,3 +39,32 @@
         filter: invert(1) brightness(2);
     }
 }
+
+@keyframes grow-in {
+    from {
+        scale: 0.2;
+        opacity: 0;
+    }
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes shrink-out {
+    from {
+        scale: 1;
+        opacity: 1;
+    }
+    to {
+        scale: 0.2;
+        opacity: 0;
+    }
+}
+
+::view-transition-new(page-content) {
+    animation: grow-in 400ms ease forwards;
+}
+::view-transition-old(page-content) {
+    animation: shrink-out 400ms ease forwards;
+}

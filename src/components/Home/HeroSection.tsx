@@ -5,7 +5,7 @@ import { LuMapPin } from "react-icons/lu";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col gap-7 pt-8 pb-8 md:pt-8 md:pb-8 items-center justify-center w-[85vw] md:w-[38] lg:w-[35vw] h-auto md:h-[90vh] bg-(--second-bg)/40 border border-(--border) text-(--text) rounded-2xl">
+    <section className="relative flex flex-col gap-7 pt-8 md:mt-8 pb-8 lg:pt-8 lg:pb-8 items-center justify-center w-[85vw] md:w-[38] lg:w-[35vw] h-auto lg:h-[90vh] bg-(--second-bg)/40 border border-(--border) text-(--text) rounded-2xl">
       <img
         src={profile}
         alt="Profile"

@@ -15,7 +15,7 @@ export default function ButtonSection() {
   }
 
   return (
-    <section className="relative flex flex-col items-center justify-center w-[85vw] md:w-[55vw] h-[60vh] bg-(--second-bg)/40 border border-(--border) rounded-2xl text-(--text) p-4">
+    <section className="relative flex flex-col items-center justify-center w-[85vw] lg:w-[55vw] h-[60vh] bg-(--second-bg)/40 border border-(--border) rounded-2xl text-(--text) p-4">
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 w-full h-full">
         <button
           onClick={() => goTo("/about")}

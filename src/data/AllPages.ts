@@ -23,6 +23,7 @@ export const AllPages = [
       },
     ],
   },
+
   {
     "title": "Formations",
     "sections": [
@@ -31,24 +32,27 @@ export const AllPages = [
         "style": "timeline",
         "content": [
           {
+            "title": "Stage Informatique",
+            "date": "2026 | 2 mois",
+            "content": "Stage en informatique chez ROUX LUDOVIC",
+          },
+          {
             "title": "Bachelor Informatique",
             "date": "2024 - Présent",
             "content": "Étudiant en deuxième année de Bachelor Informatique à YNOV, sur le campus de Toulouse.",
-          },
-          {
-            "title": "Stage Informatique",
-            "date": "2026",
-            "content": "Stage en informatique chez ROUX LUDOVIC - Java Springboot",
+            "altContent": "<b>Ynov</b> est une école d'informatique reconnue qui offre une formation axée sur les technologies modernes et les compétences pratiques. Son programme de Bachelor en Informatique couvre diverses technologies et méthodologies, préparant les étudiants à leur future carrière dans le secteur informatique. Nous y apprenons des langages de programmation, le développement web, la gestion de bases de données, et bien plus encore.",
           },
           {
             "title": "BAC général",
             "date": "2024",
             "content": "Baccalauréat général au lycée Borde Basse avec pour spécialités : Mathématiques et NSI (Numérique et Sciences Informatiques).",
+            "altContent": "Le lycée <b>Borde Basse</b> est un lycée situé à Castres qui offre un enseignement général, technologique et professionnel. Dans ce lycée, j'ai pu approfondir mes connaissances en informatique grâce à la spécialité NSI où j'ai appris le langage Python ainsi que la logique de programmation. De plus j'y ai aussi vu du SQL, de l'algorithmie, des bases en développement web, en assembly, en binaire et en réseaux qui m'ont servi pour la suite de mes études."
           },
         ],
       },
     ],
   },
+
   {
     "title": "Projects",
     "sections": [
@@ -58,6 +62,7 @@ export const AllPages = [
       },
     ],
   },
+
   {
     "title": "404",
     "sections": [

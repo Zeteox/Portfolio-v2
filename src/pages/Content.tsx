@@ -1,20 +1,34 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import parse from "html-react-parser";
 import { flushSync } from "react-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { CleanWord } from "../utils/utils";
 import { AllPages } from "../data/AllPages";
 
+interface DefaultSection {
+  title: string;
+  style?: string;
+  content: string;
+}
+
 interface TimelineItem {
   title: string;
   date: string;
   content: string;
+  altContent?: string | DefaultSection[];
+}
+
+interface GridItems {
+  langages: string[];
+  frameworks: string[];
+  tools: string[];
 }
 
 interface Section {
   title: string;
   style?: string;
-  content: string | { langages: string[], frameworks: string[], tools: string[] } | TimelineItem[];
+  content: string | GridItems | TimelineItem[];
 }
 
 interface PageContent {
@@ -25,6 +39,7 @@ interface PageContent {
 export default function Content() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [content, setContent] = useState<PageContent | null>(null);
 
   function goTo(path: string) {
@@ -71,9 +86,10 @@ export default function Content() {
           <div key={index} className={`flex flex-col gap-2
             ${section.style === "case" ? "p-6 border rounded-2xl border-(--border)" : ""}
             ${section.style === "grid" ? "p-6 border rounded-2xl border-(--border) col-span-2 text-center items-center" : ""}
+            ${section.style === "timeline" ? "col-span-2" : ""}
             `}>
             {section.title && (
-              <h2 className="text-2xl font-semibold">{section.title}</h2>
+              <h2 className="text-2xl font-semibold">{parse(section.title)}</h2>
             )}
             {section.title !== "" ? (
               <span className={`h-px w-2/3 mb-2 bg-(--border)`}></span>
@@ -82,20 +98,41 @@ export default function Content() {
               <p className="text-lg">{section.content}</p>
             ) : Array.isArray(section.content) ? (
                 //Timeline
-              <div className="flex flex-col gap-1 mt-4">
+              <div className='flex flex-col gap-1 col-span-2 mt-4'>
                 {section.content.map((item, i) => (
-                  <div key={i} className="flex gap-4">
+                  <div key={i} className={`flex gap-4`}>
                     <div className="flex flex-col items-center">
                       <div className="w-4 h-5 bg-(--border) rounded-full"></div>
                       {i < section.content.length && (
                         <div className="w-1 h-full bg-(--border) mt-1"></div>
                       )}
                     </div>
-                    <button onClick={() => window.location.href = `/`} className="p-2 rounded-2xl border border-(--border) mb-4 hover:border-(--text) hover:border-2 transition-all duration-300 hover:scale-102">
-                      <h3 className="text-xl font-semibold">{item.title}</h3>
-                      <p className="text-sm text-(--border) mb-2">{item.date}</p>
-                      <p className="text-lg">{item.content}</p>
-                    </button>
+
+                    {item.altContent ? (
+                      <button
+                        onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
+                        className={`
+                          p-2 rounded-2xl border border-(--border) mb-4 transition-all duration-300 text-left w-2/3
+                          ${expandedIndex === i ? "p-4 border border-(--text) w-full overflow-y-scroll overflow-x-auto" : "hover:border-(--text) hover:border-2 hover:scale-101"}
+                        `}
+                        style={{ transformOrigin: "top left"}}
+                      >
+                        <h3 className="text-xl font-semibold">{parse(item.title)}</h3>
+                        <p className="text-sm text-(--border) mb-2">{parse(item.date)}</p>
+                        <p className="text-lg">{parse(item.content)}</p>
+                        {expandedIndex === i ? (
+                          typeof item.altContent === "string" ? (
+                            <p className="text-lg mt-4">{parse(item.altContent)}</p>
+                          ) : null
+                        ) : null}
+                      </button>
+                    ) : (
+                      <div className="p-2 rounded-2xl border border-(--border) mb-4 w-2/3">
+                        <h3 className="text-xl font-semibold">{item.title}</h3>
+                        <p className="text-sm text-(--border) mb-2">{item.date}</p>
+                        <p className="text-lg">{parse(item.content)}</p>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -106,7 +143,7 @@ export default function Content() {
                   <div key={key} className="flex flex-col gap-2">
                     <span className="text-xl">{CleanWord(key)}</span>
                     <div className="flex flex-wrap gap-2 text-center items-center justify-center border border-(--border) rounded-2xl p-4">
-                      {value.map((l, i) => <span className="bg-(--second-bg) rounded-full px-2 py-1" key={i}>{l}</span>)}
+                      {value.map((l: string, i: number) => <span className="bg-(--second-bg) rounded-full px-2 py-1" key={i}>{parse(l)}</span>)}
                     </div>
                   </div>
                 ))}

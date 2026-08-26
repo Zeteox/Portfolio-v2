@@ -58,7 +58,39 @@ export const AllPages = [
     "sections": [
       {
         "title": "",
-        "content": "",
+        "style": "card",
+        "content": [
+          {
+            "title": "TaskIt",
+            "projectNature": "Personnel",
+            "projectType": "Jeux",
+            "content": "Un mod pour le jeu Minecraft ajoutant un système de gestion de tâches pour améliorer l'expérience de jeu.",
+            "date": "03-2025",
+            "advancedContent": [
+              {
+                "title": "Advanced Content",
+                "content": "tt",
+              },
+            ],
+            "imageB64": "",
+            "link": "https://github.com/Zeteox/TaskIt",
+          },
+          {
+            "title": "Survivalist Python",
+            "projectNature": "Academique",
+            "projectType": "Jeux",
+            "content": "Un jeu de survie en Python dans le CLI avec des fonctionnalités de gestion de ressources, mini-jeux et sauvegarde.",
+            "date": "09-2025",
+            "advancedContent": [
+              {
+                "title": "Advanced Content",
+                "content": "tt",
+              },
+            ],
+            "imageB64": "",
+            "link": "https://github.com/Zeteox/Survivalist-Python",
+          },
+        ],
       },
     ],
   },

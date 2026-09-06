@@ -124,7 +124,8 @@ export default function Content() {
                           typeof item.altContent === "string" ? (
                             <p className="text-lg mt-4">{parse(item.altContent)}</p>
                           ) : null
-                        ) : null}
+                        ) :
+                        <p className="text-(--border)">Cliquez pour plus d'informations</p>}
                       </button>
                     ) : (
                       <div className="p-2 rounded-2xl border border-(--border) mb-4 w-2/3">
